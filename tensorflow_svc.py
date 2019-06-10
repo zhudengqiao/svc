@@ -97,6 +97,8 @@ if __name__ == '__main__':
             un_sv.append(sample[i, :])
     sv, bsv, un_sv = np.array(sv),  np.array(bsv),  np.array(un_sv)
 
+    quad, r = cal_sphere_r(sample, sv, beta, k_matrix, q)
+
     plt.figure()
     plt.plot(un_sv[:, 0], un_sv[:, 1], ".", color="green")
     plt.plot(sv[:, 0], sv[:, 1], ".", color="red")
